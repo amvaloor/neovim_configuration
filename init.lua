@@ -18,5 +18,8 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
+-- Set leader key to <space>
+vim.g.mapleader = "<space>"
+
 -- Set up package manager
 require("config.lazy")
