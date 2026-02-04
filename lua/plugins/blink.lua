@@ -27,6 +27,10 @@ return {
                     },
                 },
             },
+
+            signature = {
+                enabled = true,
+            },
         },
         opts_extend = { "sources.default" }
     }

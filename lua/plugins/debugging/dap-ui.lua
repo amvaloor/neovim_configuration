@@ -11,7 +11,7 @@ return {
 
             dapui.setup()
 
-            vim.keymap.set("n", "<leader>du", function() dapui.toggle() end, { desc = "Debug: Toggle UI" })
+            vim.keymap.set("n", "<leader>du", function() dapui.toggle() end, { desc = "toggle UI" })
 
             -- When DAP starts a process, open the UI
             dap.listeners.before.attach.dapui_config = function()

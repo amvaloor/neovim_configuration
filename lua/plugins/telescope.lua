@@ -9,15 +9,23 @@ return {
         config = function()
             local builtin = require('telescope.builtin')
 
-            -- <leader>ff = Find Files (Fuzzy find files by name)
-            vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+            -- Fuzzy find files by name
+            vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'find files' })
 
-            -- <leader>fg = Find Grep (Search for text INSIDE files)
-            vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+            -- Search for text inside files
+            vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'live grep' })
 
-            -- <leader>fb = Find Buffers (Search open tabs)
-            vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-            vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+            -- Search open tabs
+            vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'buffers' })
+
+            -- Search the official neovim documentation
+            vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'help tags' })
+
+            -- Search recently opened files
+            vim.keymap.set('n', '<leader>fr', builtin.oldfiles, { desc = 'search recently opened' })
+
+            -- Find every LSP error
+            vim.keymap.set('n', '<leader>fe', builtin.diagnostics, { desc = 'search LSP errors' })
 
             require('telescope').setup {
                 extensions = {
