@@ -12,7 +12,7 @@ return {
             },
 
             completion = {
-                documentation = { auto_show = false },
+                documentation = { auto_show = true },
                 accept = { auto_brackets = { enabled = true } },
             },
 
@@ -28,9 +28,8 @@ return {
                 },
             },
 
-            signature = {
-                enabled = true,
-            },
+            fuzzy = { implementation = "prefer_rust_with_warning" },
+
         },
         opts_extend = { "sources.default" }
     }

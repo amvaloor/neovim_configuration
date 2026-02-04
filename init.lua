@@ -21,5 +21,8 @@ vim.api.nvim_create_autocmd("FileType", {
 -- Set leader key to <space>
 vim.g.mapleader = "<space>"
 
+-- Share clipboard with system
+vim.opt.clipboard = "unnamedplus"
+
 -- Set up package manager
 require("config.lazy")

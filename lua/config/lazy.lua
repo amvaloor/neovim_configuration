@@ -26,7 +26,6 @@ require("lazy").setup({
   spec = {
     -- import your plugins
     { import = "plugins" },
-    { import = "plugins.lsp" },
     { import = "plugins.debugging" },
   },
   -- Configure any other settings here. See the documentation for more details.
