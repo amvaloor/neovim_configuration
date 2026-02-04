@@ -6,7 +6,8 @@ return {
             delay = 300,
             spec = {
                 { "<leader>d", group = "Debug" },
-                { "<leader>f", group = "Telescope"},
+                { "<leader>f", group = "Telescope" },
+                { "<leader>s", group = "Split Screen" }
             },
         },
         keys = {

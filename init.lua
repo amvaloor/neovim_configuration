@@ -26,3 +26,6 @@ vim.opt.clipboard = "unnamedplus"
 
 -- Set up package manager
 require("config.lazy")
+
+-- Set up keymaps
+require("config.keymaps")
