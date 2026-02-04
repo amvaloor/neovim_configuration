@@ -29,13 +29,13 @@ return {
 
                 -- Disable default syntax highlighting and activate Treesitter
                 highlight = {
-                    enable = true, 
+                    enable = true,
                     additional_vim_regex_highlighting = false,
                 },
 
                 -- Use Treesitter's auto-indentation
-                indent = { 
-                    enable = true 
+                indent = {
+                    enable = true
                 },
             })
         end
