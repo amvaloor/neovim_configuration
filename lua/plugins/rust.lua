@@ -11,7 +11,10 @@ return {
                 server = {
                     capabilities = capabilities,
                     on_attach = function(client, bufnr)
-                        -- You can add Rust-specific keymaps here
+                        local ts = require('telescope.builtin')
+
+                        vim.keymap.set('n', 'gd', ts.lsp_definitions, { desc = 'Telescope Definition' })
+                        vim.keymap.set('n', 'gr', ts.lsp_references, { desc = 'Telescope References' })
                         vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
                     end,
                     default_settings = {
@@ -22,6 +25,7 @@ return {
                             procMacro = { enable = true },
                             cargo = { allFeatures = true },
                             inlayHints = {
+                                enable = true,
                                 bindingModeHints = { enable = true },
                                 chainingHints = { enable = true },
                                 closingBraceHints = { enable = true },
