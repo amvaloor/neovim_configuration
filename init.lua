@@ -24,6 +24,9 @@ vim.g.mapleader = "<space>"
 -- Share clipboard with system
 vim.opt.clipboard = "unnamedplus"
 
+-- Set color for inline hints
+vim.api.nvim_set_hl(0, "LspInlayHint", { fg = "#565f89", italic = true })
+
 -- Set up package manager
 require("config.lazy")
 
