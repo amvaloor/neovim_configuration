@@ -24,6 +24,12 @@ return {
             })
 
             require("mason-lspconfig").setup({
+                automatic_enable = {
+                    true,
+                    exclude = {
+                        "rust_analyzer",
+                    },
+                },
                 ensure_installed = {
                     "lua_ls",
                     "clangd",
