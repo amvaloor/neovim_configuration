@@ -5,15 +5,34 @@ return {
         version = '1.*',
 
         opts = {
-            keymap = { preset = 'default' },
+            keymap = {
+                preset = 'super-tab',
+                ['<Tab>'] = { 'select_next', 'snippet_forward', 'fallback' },
+                ['<S-Tab>'] = { 'select_prev', 'snippet_backward', 'fallback' },
+                ['<CR>'] = { 'accept', 'fallback' },
+            },
 
             appearance = {
                 nerd_font_variant = 'mono'
             },
 
+            signature = {
+                enabled = true,
+                window = {
+                    border = 'rounded',
+                },
+            },
+
             completion = {
+                ghost_text = { enabled = true },
                 documentation = { auto_show = true },
                 accept = { auto_brackets = { enabled = true } },
+                list = {
+                    selection = {
+                        preselect = false,
+                        auto_insert = false,
+                    }
+                }
             },
 
             sources = {

@@ -35,7 +35,7 @@ return {
 
                 -- Use Treesitter's auto-indentation
                 indent = {
-                    enable = true
+                    enable = false
                 },
             })
         end

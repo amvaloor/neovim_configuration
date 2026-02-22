@@ -5,25 +5,26 @@ return {
         branch = "v3.x",
         dependencies = {
             "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons", 
+            "nvim-tree/nvim-web-devicons",
             "MunifTanjim/nui.nvim",
         },
         config = function()
             require("neo-tree").setup({
                 filesystem = {
                     filtered_items = {
-                        visible = true,             -- master switch to show hidden files/dotfiles
-                        hide_dotfiles = false,      -- makes neo-tree show files that start with a dot
-                        hide_gitignored = false,    -- makes neo-tree show files that are in the .gitignore
+                        visible = true,          -- master switch to show hidden files/dotfiles
+                        hide_dotfiles = false,   -- makes neo-tree show files that start with a dot
+                        hide_gitignored = false, -- makes neo-tree show files that are in the .gitignore
                     },
                 },
             })
-          
-          -- Keymap to toggle the sidebar
-          vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal left<CR>', {})
+
+            -- Keymap to toggle the sidebar
+            vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal left<CR>', { desc = "Enter file explorer" })
+            vim.keymap.set('n', '<leader>e', ':Neotree toggle<CR>', { desc = "Toggle file explorer" })
         end
-      },
-    
+    },
+
     -- Auto-update imports when renaming files
     {
         "antosha417/nvim-lsp-file-operations",
