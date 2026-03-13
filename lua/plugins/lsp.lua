@@ -21,6 +21,7 @@ return {
                         },
                     },
                 },
+                verible = {},
             },
         },
         config = function(_, opts)
@@ -45,6 +46,7 @@ return {
                     "lua_ls",
                     "clangd",
                     "gopls",
+                    "verible",
                 }
             })
 
