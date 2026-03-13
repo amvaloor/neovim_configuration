@@ -8,8 +8,6 @@ return {
                     python = { "isort", "ruff_format" },
                     rust = { "rustfmt" },
                     go = { "goimports", "gofumpt" },
-                    verilog = { "verible" },
-                    systemverilog = { "verible" },
                 },
                 format_on_save = {
                     timeout_ms = 500,
