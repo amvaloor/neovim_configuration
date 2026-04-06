@@ -1,5 +1,9 @@
 local set = vim.keymap.set
 
+
+-- Typing 'jk' quickly in insert mode will act as Escape
+set("i", "jk", "<Esc>", { desc = "Exit insert mode" })
+
 -- Split related keymaps
 set('n', '<leader>sp', '<cmd>split<CR>', { desc = 'split horizontally' })
 set('n', '<leader>sv', '<cmd>vsplit<CR>', { desc = 'split vertically' })
