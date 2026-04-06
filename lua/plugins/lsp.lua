@@ -21,7 +21,11 @@ return {
                         },
                     },
                 },
-                verible = {},
+                verible = {
+                    root_dir = function(fname)
+                        return vim.fs.root(fname, {".git", "verible.filelist", ".verible-verilog-ls.conf"})
+                    end,
+                },
             },
         },
         config = function(_, opts)
