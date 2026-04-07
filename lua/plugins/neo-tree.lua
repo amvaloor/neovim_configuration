@@ -17,6 +17,15 @@ return {
                         hide_gitignored = false, -- makes neo-tree show files that are in the .gitignore
                     },
                 },
+                default_component_configs = {
+        git_status = {
+            symbols = {
+                -- Change these to icons that are harder to mistake for "boxes"
+                unstaged  = "✗", -- The "box" you see
+                staged    = "✓", -- A checkmark
+            },
+        },
+    }
             })
 
             -- Keymap to toggle the sidebar

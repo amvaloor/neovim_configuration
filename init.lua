@@ -1,5 +1,6 @@
 -- Set leader key to <space>
 vim.g.mapleader = "<space>"
+vim.g.maplocalleader = "<space>"
 
 -- Set up options
 require("config.options")

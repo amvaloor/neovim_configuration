@@ -13,9 +13,9 @@ opt.shiftwidth = 4   -- auto-indents are four spaces wide
 opt.softtabstop = 4  -- the tab and backspace characters affect 4 spaces
 
 -- Share clipboard with system
-vim.opt.clipboard = "unnamedplus"
+opt.clipboard = "unnamedplus"
 
 -- Set up folding
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-vim.opt.foldlevel = 99 -- This ensures files start 'unfolded'
+opt.foldmethod = "expr"
+opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+opt.foldlevel = 99 -- This ensures files start 'unfolded'
