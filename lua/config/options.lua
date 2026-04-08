@@ -19,3 +19,6 @@ opt.clipboard = "unnamedplus"
 opt.foldmethod = "expr"
 opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 opt.foldlevel = 99 -- This ensures files start 'unfolded'
+
+-- Preview command line changes
+vim.opt.inccommand = "split"

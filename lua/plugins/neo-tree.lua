@@ -17,15 +17,26 @@ return {
                         hide_gitignored = false, -- makes neo-tree show files that are in the .gitignore
                     },
                 },
+                window = {
+                    mappings = {
+                        ["A"]  = "git_add_all",
+                        ["gu"] = "git_unstage_file",
+                        ["ga"] = "git_add_file",
+                        ["gr"] = "git_revert_file",
+                        ["gc"] = "git_commit",
+                        ["gp"] = "git_push",
+                        ["gg"] = "git_commit_and_push",
+                    }
+                },
                 default_component_configs = {
-        git_status = {
-            symbols = {
-                -- Change these to icons that are harder to mistake for "boxes"
-                unstaged  = "✗", -- The "box" you see
-                staged    = "✓", -- A checkmark
-            },
-        },
-    }
+                    git_status = {
+                        symbols = {
+                            -- Change these to icons that are harder to mistake for "boxes"
+                            unstaged = "✗", -- The "box" you see
+                            staged   = "✓", -- A checkmark
+                        },
+                    },
+                }
             })
 
             -- Keymap to toggle the sidebar
