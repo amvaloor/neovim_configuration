@@ -23,8 +23,33 @@ return {
                 },
                 verible = {
                     root_dir = function(fname)
-                        return vim.fs.root(fname, {".git", "verible.filelist", ".verible-verilog-ls.conf"})
+                        return vim.fs.root(fname, { ".git", "verible.filelist", ".verible-verilog-ls.conf" })
                     end,
+                },
+                pyright = {
+                    root_dir = function(fname)
+                        -- Look for standard Python project markers
+                        return vim.fs.root(fname, {
+                            ".git",
+                            "pyproject.toml",
+                            "setup.py",
+                            "setup.cfg",
+                            "requirements.txt",
+                            "Pipfile",
+                            "pyrightconfig.json"
+                        })
+                    end,
+                    settings = {
+                        python = {
+                            analysis = {
+                                autoSearchPaths = true,
+                                useLibraryCodeForTypes = true,
+                                diagnosticMode = "workspace",
+                                -- This tells Pyright to treat the root as a source path
+                                extraPaths = { "." },
+                            },
+                        },
+                    },
                 },
             },
         },
