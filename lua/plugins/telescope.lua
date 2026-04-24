@@ -1,6 +1,7 @@
 return {
     {
-        'nvim-telescope/telescope.nvim', version = '*',
+        'nvim-telescope/telescope.nvim',
+        version = '*',
         dependencies = {
             'nvim-lua/plenary.nvim',
             -- FZF native extension
@@ -27,14 +28,21 @@ return {
             -- Find every LSP error
             vim.keymap.set('n', '<leader>fe', builtin.diagnostics, { desc = 'search LSP errors' })
 
+            -- Edit Neovim config files
+            vim.keymap.set('n', '<leader>en', function()
+                builtin.find_files {
+                    cwd = vim.fn.stdpath("config")
+                }
+            end)
+
             require('telescope').setup {
                 extensions = {
                     fzf = {
-                        fuzzy = true,                    -- false will only do exact matching
-                        override_generic_sorter = true,  -- override the generic sorter
-                        override_file_sorter = true,     -- override the file sorter
-                        case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
-                                                   -- the default case_mode is "smart_case"
+                        fuzzy = true,                   -- false will only do exact matching
+                        override_generic_sorter = true, -- override the generic sorter
+                        override_file_sorter = true,    -- override the file sorter
+                        case_mode = "smart_case",       -- or "ignore_case" or "respect_case"
+                        -- the default case_mode is "smart_case"
                     }
                 }
             }
@@ -42,7 +50,7 @@ return {
             pcall(require('telescope').load_extension, 'fzf')
         end
     },
-    {   -- Sets up a dropdown menu UI for some options
+    { -- Sets up a dropdown menu UI for some options
         'nvim-telescope/telescope-ui-select.nvim',
         config = function()
             require("telescope").setup({

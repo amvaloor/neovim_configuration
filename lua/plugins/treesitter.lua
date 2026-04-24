@@ -2,23 +2,19 @@ return {
     {
         'nvim-treesitter/nvim-treesitter',
         lazy = false,
-        branch = "master",
+        branch = "main",
         build = ':TSUpdate',
 
         config = function()
-            local config = require("nvim-treesitter.configs")
+            local config = require("nvim-treesitter")
             config.setup({
                 -- Parsers to have installed by default
                 ensure_installed = {
                     "lua",
-                    "html",
-                    "css",
                     "vim",
                     "vimdoc",
                     "c",
                     "cpp",
-                    "rust",
-                    "go"
                 },
 
                 -- Parsers can download in the background while a file is being edited
