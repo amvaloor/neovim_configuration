@@ -35,6 +35,9 @@ return {
                 }
             end)
 
+            -- Search colorschemes
+            vim.keymap.set('n', '<leader>fc', builtin.colorscheme, { desc = 'search available colorschemes' })
+
             require('telescope').setup {
                 extensions = {
                     fzf = {
