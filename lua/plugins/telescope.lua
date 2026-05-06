@@ -29,11 +29,11 @@ return {
             vim.keymap.set('n', '<leader>fe', builtin.diagnostics, { desc = 'search LSP errors' })
 
             -- Edit Neovim config files
-            vim.keymap.set('n', '<leader>en', function()
+            vim.keymap.set('n', '<leader>fn', function()
                 builtin.find_files {
                     cwd = vim.fn.stdpath("config")
                 }
-            end)
+            end, { desc = 'neovim config' })
 
             -- Search colorschemes
             vim.keymap.set('n', '<leader>fc', builtin.colorscheme, { desc = 'search available colorschemes' })
