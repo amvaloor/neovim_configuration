@@ -3,6 +3,9 @@ local opt = vim.opt
 -- Enable line numbers
 opt.number = true
 
+-- Show relative line numbers
+opt.relativenumber = true
+
 -- Show status line w/ file
 opt.laststatus = 3
 

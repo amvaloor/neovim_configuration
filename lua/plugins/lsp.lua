@@ -89,7 +89,7 @@ return {
                 -- virtual_lines = false,
                 underline = true,
             })
-            vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+            vim.keymap.set('n', 'K', function() vim.lsp.buf.hover({ border = "rounded" }) end, { desc = "Hover" })
             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = "Get definition" })
             vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, { desc = "Code action" })
             vim.keymap.set('i', '<C-k>', vim.lsp.buf.signature_help, { desc = "Signature help" })
