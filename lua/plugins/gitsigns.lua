@@ -4,9 +4,9 @@ return {
         signs      = {
             add          = { text = '┃' },
             change       = { text = '┃' },
-            delete       = { text = '_' },
-            topdelete    = { text = '‾' },
-            changedelete = { text = '~' },
+            delete       = { text = '_', show_count = true },
+            topdelete    = { text = '‾', show_count = true },
+            changedelete = { text = '~', show_count = true },
             untracked    = { text = '┆' },
         },
         -- This makes the signs look like a solid bar (VSCode style)
