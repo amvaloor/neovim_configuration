@@ -5,6 +5,9 @@ vim.g.maplocalleader = "<space>"
 -- Set up options
 require("config.options")
 
+-- Set up filetypes
+require("config.filetypes")
+
 -- Set up API
 require("config.api")
 

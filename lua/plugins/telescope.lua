@@ -38,6 +38,12 @@ return {
             -- Search colorschemes
             vim.keymap.set('n', '<leader>fc', builtin.colorscheme, { desc = 'search available colorschemes' })
 
+            -- Search LSP references to function or variable across codebase
+            vim.keymap.set('n', '<leader>fu', builtin.lsp_references, { desc = 'find references' })
+
+            -- Search for the literal string under the cursor project-wide
+            vim.keymap.set('n', '<leader>fw', builtin.grep_string, { desc = 'find word under cursor' })
+
             require('telescope').setup {
                 extensions = {
                     fzf = {
