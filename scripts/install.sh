@@ -26,7 +26,7 @@ TMP_DIR="$(mktemp -d)"
 trap 'rm -rf "$TMP_DIR"' EXIT
 
 # download tarball
-echo "Downloading neovim from ${DOWNLOAD_URL}"
+echo "Downloading Neovim from ${DOWNLOAD_URL}"
 curl -fL "$DOWNLOAD_URL" -o "${TMP_DIR}/${FILENAME}"
 
 # create binary directory if it does not yet exist
@@ -34,7 +34,7 @@ INSTALL_DIR="${HOME}/.local/nvim"
 BIN_DIR="${HOME}/.local/bin"
 mkdir -p "$BIN_DIR"
 
-# remove any previous neovim installation
+# remove any previous Neovim installation
 rm -rf "$INSTALL_DIR"
 
 # create installation directory and extract
