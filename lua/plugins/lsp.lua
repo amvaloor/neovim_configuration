@@ -72,10 +72,7 @@ return {
                         "rust_analyzer",
                     },
                 },
-                ensure_installed = {
-                    "lua_ls",
-                    "clangd",
-                }
+                ensure_installed = {}
             })
 
             for server, config in pairs(opts.servers) do
